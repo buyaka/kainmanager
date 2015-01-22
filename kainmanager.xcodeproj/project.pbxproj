@@ -13,6 +13,22 @@
 		43BB19B61A70AD6A0018EFA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43BB19B51A70AD6A0018EFA5 /* Images.xcassets */; };
 		43BB19B91A70AD6A0018EFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43BB19B71A70AD6A0018EFA5 /* LaunchScreen.xib */; };
 		43BB19C51A70AD6A0018EFA5 /* kainmanagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19C41A70AD6A0018EFA5 /* kainmanagerTests.swift */; };
+		43BB19DE1A70AF6F0018EFA5 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19D11A70AF6F0018EFA5 /* AESCrypt.m */; };
+		43BB19DF1A70AF6F0018EFA5 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19D31A70AF6F0018EFA5 /* NSData+Base64.m */; };
+		43BB19E01A70AF6F0018EFA5 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19D51A70AF6F0018EFA5 /* NSData+CommonCrypto.m */; };
+		43BB19E11A70AF6F0018EFA5 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19D71A70AF6F0018EFA5 /* NSString+Base64.m */; };
+		43BB19E21A70AF6F0018EFA5 /* Dynas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19D81A70AF6F0018EFA5 /* Dynas.swift */; };
+		43BB19E31A70AF6F0018EFA5 /* DynasBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19D91A70AF6F0018EFA5 /* DynasBannerView.swift */; };
+		43BB19E41A70AF6F0018EFA5 /* DynasHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19DA1A70AF6F0018EFA5 /* DynasHelper.swift */; };
+		43BB19E51A70AF6F0018EFA5 /* DynasObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19DB1A70AF6F0018EFA5 /* DynasObject.swift */; };
+		43BB19E61A70AF6F0018EFA5 /* DynasObjectAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19DC1A70AF6F0018EFA5 /* DynasObjectAdView.swift */; };
+		43BB19E71A70AF6F0018EFA5 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19DD1A70AF6F0018EFA5 /* KeychainAccess.swift */; };
+		43BB19F71A70B1EB0018EFA5 /* Kain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19F61A70B1EB0018EFA5 /* Kain.swift */; };
+		43BB19FA1A70B2BB0018EFA5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19F81A70B2BB0018EFA5 /* SigninViewController.swift */; };
+		43BB19FB1A70B2BB0018EFA5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB19F91A70B2BB0018EFA5 /* SignupViewController.swift */; };
+		43BB19FD1A70B67F0018EFA5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BB19EF1A70B0150018EFA5 /* Alamofire.framework */; };
+		43BB19FE1A70B67F0018EFA5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43BB19EF1A70B0150018EFA5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43BB1A031A70B99A0018EFA5 /* KainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB1A021A70B99A0018EFA5 /* KainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +39,56 @@
 			remoteGlobalIDString = 43BB19A81A70AD6A0018EFA5;
 			remoteInfo = kainmanager;
 		};
+		43BB19EE1A70B0150018EFA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43BB19E81A70B0150018EFA5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		43BB19F01A70B0150018EFA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43BB19E81A70B0150018EFA5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		43BB19F21A70B0150018EFA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43BB19E81A70B0150018EFA5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		43BB19F41A70B0440018EFA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43BB19E81A70B0150018EFA5 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		43BB19FF1A70B67F0018EFA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43BB19E81A70B0150018EFA5 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43BB1A011A70B67F0018EFA5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43BB19FE1A70B67F0018EFA5 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		43BB19A91A70AD6A0018EFA5 /* kainmanager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kainmanager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +101,25 @@
 		43BB19BE1A70AD6A0018EFA5 /* kainmanagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kainmanagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BB19C31A70AD6A0018EFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43BB19C41A70AD6A0018EFA5 /* kainmanagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kainmanagerTests.swift; sourceTree = "<group>"; };
+		43BB19D01A70AF6F0018EFA5 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		43BB19D11A70AF6F0018EFA5 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		43BB19D21A70AF6F0018EFA5 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		43BB19D31A70AF6F0018EFA5 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		43BB19D41A70AF6F0018EFA5 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		43BB19D51A70AF6F0018EFA5 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		43BB19D61A70AF6F0018EFA5 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		43BB19D71A70AF6F0018EFA5 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		43BB19D81A70AF6F0018EFA5 /* Dynas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynas.swift; sourceTree = "<group>"; };
+		43BB19D91A70AF6F0018EFA5 /* DynasBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynasBannerView.swift; sourceTree = "<group>"; };
+		43BB19DA1A70AF6F0018EFA5 /* DynasHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynasHelper.swift; sourceTree = "<group>"; };
+		43BB19DB1A70AF6F0018EFA5 /* DynasObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynasObject.swift; sourceTree = "<group>"; };
+		43BB19DC1A70AF6F0018EFA5 /* DynasObjectAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynasObjectAdView.swift; sourceTree = "<group>"; };
+		43BB19DD1A70AF6F0018EFA5 /* KeychainAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
+		43BB19E81A70B0150018EFA5 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		43BB19F61A70B1EB0018EFA5 /* Kain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kain.swift; sourceTree = "<group>"; };
+		43BB19F81A70B2BB0018EFA5 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		43BB19F91A70B2BB0018EFA5 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		43BB1A021A70B99A0018EFA5 /* KainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BB19FD1A70B67F0018EFA5 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +144,7 @@
 		43BB19A01A70AD6A0018EFA5 = {
 			isa = PBXGroup;
 			children = (
+				43BB19E81A70B0150018EFA5 /* Alamofire.xcodeproj */,
 				43BB19AB1A70AD6A0018EFA5 /* kainmanager */,
 				43BB19C11A70AD6A0018EFA5 /* kainmanagerTests */,
 				43BB19AA1A70AD6A0018EFA5 /* Products */,
@@ -77,12 +163,17 @@
 		43BB19AB1A70AD6A0018EFA5 /* kainmanager */ = {
 			isa = PBXGroup;
 			children = (
+				43BB19F81A70B2BB0018EFA5 /* SigninViewController.swift */,
+				43BB19F91A70B2BB0018EFA5 /* SignupViewController.swift */,
+				43BB19CE1A70AF6F0018EFA5 /* DynasClient */,
 				43BB19AE1A70AD6A0018EFA5 /* AppDelegate.swift */,
 				43BB19B01A70AD6A0018EFA5 /* ViewController.swift */,
 				43BB19B21A70AD6A0018EFA5 /* Main.storyboard */,
 				43BB19B51A70AD6A0018EFA5 /* Images.xcassets */,
 				43BB19B71A70AD6A0018EFA5 /* LaunchScreen.xib */,
 				43BB19AC1A70AD6A0018EFA5 /* Supporting Files */,
+				43BB19F61A70B1EB0018EFA5 /* Kain.swift */,
+				43BB1A021A70B99A0018EFA5 /* KainViewController.swift */,
 			);
 			path = kainmanager;
 			sourceTree = "<group>";
@@ -112,6 +203,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		43BB19CE1A70AF6F0018EFA5 /* DynasClient */ = {
+			isa = PBXGroup;
+			children = (
+				43BB19CF1A70AF6F0018EFA5 /* AESCrypt */,
+				43BB19D81A70AF6F0018EFA5 /* Dynas.swift */,
+				43BB19D91A70AF6F0018EFA5 /* DynasBannerView.swift */,
+				43BB19DA1A70AF6F0018EFA5 /* DynasHelper.swift */,
+				43BB19DB1A70AF6F0018EFA5 /* DynasObject.swift */,
+				43BB19DC1A70AF6F0018EFA5 /* DynasObjectAdView.swift */,
+				43BB19DD1A70AF6F0018EFA5 /* KeychainAccess.swift */,
+			);
+			path = DynasClient;
+			sourceTree = "<group>";
+		};
+		43BB19CF1A70AF6F0018EFA5 /* AESCrypt */ = {
+			isa = PBXGroup;
+			children = (
+				43BB19D01A70AF6F0018EFA5 /* AESCrypt.h */,
+				43BB19D11A70AF6F0018EFA5 /* AESCrypt.m */,
+				43BB19D21A70AF6F0018EFA5 /* NSData+Base64.h */,
+				43BB19D31A70AF6F0018EFA5 /* NSData+Base64.m */,
+				43BB19D41A70AF6F0018EFA5 /* NSData+CommonCrypto.h */,
+				43BB19D51A70AF6F0018EFA5 /* NSData+CommonCrypto.m */,
+				43BB19D61A70AF6F0018EFA5 /* NSString+Base64.h */,
+				43BB19D71A70AF6F0018EFA5 /* NSString+Base64.m */,
+			);
+			path = AESCrypt;
+			sourceTree = "<group>";
+		};
+		43BB19E91A70B0150018EFA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43BB19EF1A70B0150018EFA5 /* Alamofire.framework */,
+				43BB19F11A70B0150018EFA5 /* Alamofire.framework */,
+				43BB19F31A70B0150018EFA5 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +252,13 @@
 				43BB19A51A70AD6A0018EFA5 /* Sources */,
 				43BB19A61A70AD6A0018EFA5 /* Frameworks */,
 				43BB19A71A70AD6A0018EFA5 /* Resources */,
+				43BB1A011A70B67F0018EFA5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				43BB19F51A70B0440018EFA5 /* PBXTargetDependency */,
+				43BB1A001A70B67F0018EFA5 /* PBXTargetDependency */,
 			);
 			name = kainmanager;
 			productName = kainmanager;
@@ -179,6 +312,12 @@
 			mainGroup = 43BB19A01A70AD6A0018EFA5;
 			productRefGroup = 43BB19AA1A70AD6A0018EFA5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 43BB19E91A70B0150018EFA5 /* Products */;
+					ProjectRef = 43BB19E81A70B0150018EFA5 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				43BB19A81A70AD6A0018EFA5 /* kainmanager */,
@@ -186,6 +325,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		43BB19EF1A70B0150018EFA5 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 43BB19EE1A70B0150018EFA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		43BB19F11A70B0150018EFA5 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 43BB19F01A70B0150018EFA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		43BB19F31A70B0150018EFA5 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 43BB19F21A70B0150018EFA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		43BB19A71A70AD6A0018EFA5 /* Resources */ = {
@@ -212,7 +375,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BB19FA1A70B2BB0018EFA5 /* SigninViewController.swift in Sources */,
+				43BB19E31A70AF6F0018EFA5 /* DynasBannerView.swift in Sources */,
+				43BB19E71A70AF6F0018EFA5 /* KeychainAccess.swift in Sources */,
+				43BB19E11A70AF6F0018EFA5 /* NSString+Base64.m in Sources */,
 				43BB19B11A70AD6A0018EFA5 /* ViewController.swift in Sources */,
+				43BB1A031A70B99A0018EFA5 /* KainViewController.swift in Sources */,
+				43BB19DF1A70AF6F0018EFA5 /* NSData+Base64.m in Sources */,
+				43BB19E21A70AF6F0018EFA5 /* Dynas.swift in Sources */,
+				43BB19E01A70AF6F0018EFA5 /* NSData+CommonCrypto.m in Sources */,
+				43BB19DE1A70AF6F0018EFA5 /* AESCrypt.m in Sources */,
+				43BB19E41A70AF6F0018EFA5 /* DynasHelper.swift in Sources */,
+				43BB19F71A70B1EB0018EFA5 /* Kain.swift in Sources */,
+				43BB19E61A70AF6F0018EFA5 /* DynasObjectAdView.swift in Sources */,
+				43BB19FB1A70B2BB0018EFA5 /* SignupViewController.swift in Sources */,
+				43BB19E51A70AF6F0018EFA5 /* DynasObject.swift in Sources */,
 				43BB19AF1A70AD6A0018EFA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +409,16 @@
 			isa = PBXTargetDependency;
 			target = 43BB19A81A70AD6A0018EFA5 /* kainmanager */;
 			targetProxy = 43BB19BF1A70AD6A0018EFA5 /* PBXContainerItemProxy */;
+		};
+		43BB19F51A70B0440018EFA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 43BB19F41A70B0440018EFA5 /* PBXContainerItemProxy */;
+		};
+		43BB1A001A70B67F0018EFA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 43BB19FF1A70B67F0018EFA5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -289,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -325,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -336,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = kainmanager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = kainmanager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
