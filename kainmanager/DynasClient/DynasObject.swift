@@ -16,6 +16,7 @@ class DynasObject : NSObject {
     var id : String = ""
     var entity_name : String = ""
     
+    //Serializer
     func fromJson(json: String) {
         var error : NSError?
         let JSONData = json.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)

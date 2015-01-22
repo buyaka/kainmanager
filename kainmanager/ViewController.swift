@@ -22,6 +22,47 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     @IBAction func doRefresh(sender: AnyObject) {
+        reloadData()
+    }
+    
+    @IBAction func doSignout(sender: AnyObject) {
+    }
+    
+    func isLogged() {
+        let loginController: SigninViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SinginViewController") as SigninViewController
+        if (!DynasHelper.sharedInstance.checkLogin()) {
+            self.navigationController?.presentViewController(loginController, animated: true, completion: nil)
+        }
+    }
+    
+    /*func checkLogin() {
+        // check if user is signed in
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let loginController: SigninViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SinginViewController") as SigninViewController
+        
+        // is user is not signed in display controller to sign in or sign up
+        if defaults.objectForKey("dynasUserLoggedIn") == nil {
+            self.navigationController?.presentViewController(loginController, animated: true, completion: nil)
+        } else {
+            // check if API token has expired
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            let userTokenExpiryDate : NSString? = KeychainAccess.passwordForAccount("Auth_Token_Expiry", service: "KeyChainService")
+            let dateFromString : NSDate? = dateFormatter.dateFromString(userTokenExpiryDate!)
+            let now = NSDate()
+            
+            let comparision = now.compare(dateFromString!)
+            
+            // logout and ask user to sign in again if token is expired
+            if comparision != NSComparisonResult.OrderedAscending {
+                self.doSignout(self)
+            }
+            
+        }
+    }*/
+    
+    
+    func reloadData() {
         DynasHelper.sharedInstance.showActivityIndicator(self.view)
         var model = Kain()
         Dynas.sharedInstance.getDatas(model, filter: "", completion: { (cdata, cerror) -> Void in
@@ -45,49 +86,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
     }
     
-    @IBAction func doSignout(sender: AnyObject) {
-    }
-    
-    
-    
-    
-    func checkLogin() {
-        // check if user is signed in
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let loginController: SigninViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SinginViewController") as SigninViewController
-        
-        // is user is not signed in display controller to sign in or sign up
-        if defaults.objectForKey("userLoggedIn") == nil {
-            self.navigationController?.presentViewController(loginController, animated: true, completion: nil)
-        } else {
-            // check if API token has expired
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-            let userTokenExpiryDate : NSString? = KeychainAccess.passwordForAccount("Auth_Token_Expiry", service: "KeyChainService")
-            let dateFromString : NSDate? = dateFormatter.dateFromString(userTokenExpiryDate!)
-            let now = NSDate()
-            
-            let comparision = now.compare(dateFromString!)
-            /*
-            // check if should fetch new data
-            if shouldFetchNewData {
-            shouldFetchNewData = false
-            self.setNavigationItems()
-            loadSelfieData()
-            }
-            */
-            // logout and ask user to sign in again if token is expired
-            if comparision != NSComparisonResult.OrderedAscending {
-                self.doSignout(self)
-            }
-            
-        }
-    }
-    
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        checkLogin()
+        isLogged()
     }
     
     override func viewDidLoad() {

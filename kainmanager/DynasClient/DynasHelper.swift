@@ -30,6 +30,33 @@ class DynasHelper {
         errorAlert.show()
     }
     
+    func checkLogin() -> Bool {
+        // check if user is signed in
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        // is user is not signed in display controller to sign in or sign up
+        if defaults.objectForKey("dynasUserLoggedIn") == nil {
+            return false
+        } else {
+            // check if API token has expired
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            let userTokenExpiryDate : NSString? = KeychainAccess.passwordForAccount("Auth_Token_Expiry", service: "KeyChainService")
+            let dateFromString : NSDate? = dateFormatter.dateFromString(userTokenExpiryDate!)
+            let now = NSDate()
+            
+            let comparision = now.compare(dateFromString!)
+            
+            // logout and ask user to sign in again if token is expired
+            if comparision != NSComparisonResult.OrderedAscending {
+                return false
+            }
+            
+        }
+        
+        return true
+    }
+
     
     /*
     Show customized activity indicator,

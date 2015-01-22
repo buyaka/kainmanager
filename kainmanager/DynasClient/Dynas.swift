@@ -116,7 +116,7 @@ class Dynas {
     func updateUserLoggedInFlag() {
         // Update the NSUserDefaults flag
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject("loggedIn", forKey: "userLoggedIn")
+        defaults.setObject("loggedIn", forKey: "dynasUserLoggedIn")
         defaults.synchronize()
     }
     

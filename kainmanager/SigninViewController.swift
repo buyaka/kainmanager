@@ -19,6 +19,7 @@ class SigninViewController: UIViewController {
         if countElements(self.txtEmail.text) > 0 && countElements(self.txtPassword.text) > 0  {
             
             Dynas.sharedInstance.signin(self.txtEmail.text, password: self.txtPassword.text, completion: { (cdata, cerror, cresponse) -> Void in
+                DynasHelper.sharedInstance.hideActivityIndicator(self.view)
                 
                 if (cerror == nil) {
                     Dynas.sharedInstance.saveApiTokenInKeychain(cdata)
@@ -43,7 +44,6 @@ class SigninViewController: UIViewController {
             DynasHelper.sharedInstance.displayAlertMessage("Parameters Required", alertDescription: "Some of the required parameters are missing")
         }
         
-        DynasHelper.sharedInstance.hideActivityIndicator(self.view)
     }
     
     override func viewDidLoad() {

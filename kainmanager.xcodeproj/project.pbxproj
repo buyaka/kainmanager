@@ -168,12 +168,12 @@
 				43BB19CE1A70AF6F0018EFA5 /* DynasClient */,
 				43BB19AE1A70AD6A0018EFA5 /* AppDelegate.swift */,
 				43BB19B01A70AD6A0018EFA5 /* ViewController.swift */,
+				43BB19F61A70B1EB0018EFA5 /* Kain.swift */,
+				43BB1A021A70B99A0018EFA5 /* KainViewController.swift */,
 				43BB19B21A70AD6A0018EFA5 /* Main.storyboard */,
 				43BB19B51A70AD6A0018EFA5 /* Images.xcassets */,
 				43BB19B71A70AD6A0018EFA5 /* LaunchScreen.xib */,
 				43BB19AC1A70AD6A0018EFA5 /* Supporting Files */,
-				43BB19F61A70B1EB0018EFA5 /* Kain.swift */,
-				43BB1A021A70B99A0018EFA5 /* KainViewController.swift */,
 			);
 			path = kainmanager;
 			sourceTree = "<group>";

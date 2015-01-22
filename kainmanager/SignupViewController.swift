@@ -24,6 +24,7 @@ class SignupViewController: UIViewController {
             
             let a = Dynas.sharedInstance
             a.signup(self.txtFullName.text, email: self.txtEmail.text, password: self.txtPassword.text, completion: { (cdata, cerror) -> Void in
+                DynasHelper.sharedInstance.hideActivityIndicator(self.view)
                 if (cerror == nil) {
                     println(cdata)
                     var msg = cdata["message"]! as String
@@ -42,7 +43,6 @@ class SignupViewController: UIViewController {
             DynasHelper.sharedInstance.displayAlertMessage("Parameters Required", alertDescription: "Some of the required parameters are missing")
         }
         
-        DynasHelper.sharedInstance.hideActivityIndicator(self.view)
     }
     
     @IBAction func showSigninView(sender: AnyObject) {
