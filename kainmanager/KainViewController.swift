@@ -33,7 +33,7 @@ class KainViewController : UIViewController {
         Dynas.sharedInstance.saveData(obj, params: prms, completion: { (cdata, cerror) -> Void in
             DynasHelper.sharedInstance.hideActivityIndicator(self.view)
             if cerror == nil {
-                self.dismissViewControllerAnimated(true, completion: nil)
+                DynasHelper.sharedInstance.displayAlertMessage("", alertDescription: "新しい会員を登録しました。")
             } else {
                 DynasHelper.sharedInstance.displayAlertMessage("エラー", alertDescription: cerror.description)
             }
@@ -47,7 +47,7 @@ class KainViewController : UIViewController {
         Dynas.sharedInstance.updateData(obj, params: prms, completion: { (cdata, cerror) -> Void in
             DynasHelper.sharedInstance.hideActivityIndicator(self.view)
             if cerror == nil {
-                self.dismissViewControllerAnimated(true, completion: nil)
+                DynasHelper.sharedInstance.displayAlertMessage("", alertDescription: "会員情報を更新しました。")
             } else {
                 DynasHelper.sharedInstance.displayAlertMessage("エラー", alertDescription: cerror.description)
             }

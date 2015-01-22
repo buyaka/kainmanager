@@ -32,6 +32,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let loginController: SigninViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SinginViewController") as SigninViewController
         if (!DynasHelper.sharedInstance.checkLogin()) {
             self.navigationController?.presentViewController(loginController, animated: true, completion: nil)
+        } else {
+            reloadData()
         }
     }
     
@@ -90,16 +92,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidAppear(animated)
         isLogged()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableView.allowsMultipleSelectionDuringEditing = false
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.tableData.count
@@ -108,10 +100,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         kainSelected = tableData[indexPath.row] as Kain
         performSegueWithIdentifier("kain_detail", sender: self)
-    }
-    
-    func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        return true
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
